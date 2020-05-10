@@ -55,3 +55,6 @@ lookup_iris_name = dict(zip(range(3),definitions))
 
 iris_prediction = classifier.predict([[2.0, 1.3, 0.5, 0.90]])
 print('[2.0, 1.3, 0.5, 0.90]: ' + lookup_iris_name[iris_prediction[0]])
+
+print('training set accuracy: ' + str(classifier.score(X_train, y_train)))
+print('testing set accuracy: ' + str(classifier.score(X_test, y_test)))
